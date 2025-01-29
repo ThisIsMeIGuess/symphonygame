@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>The Symphony Game!!</title>
+        <script src="indexjava.js"></script>
+    </head>
+    <style>
+        body {
+            background-color: #000000;
+            line-height: 1.5;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Times New Roman';
+            font-size: 30px;
+            horizontal-align: center;
+            vertical-align: center;
+            color: #000000
+        }
+
+
+        .overlay-text {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            left: 400px;
+            right: 400px;
+            transform: translate(0%, -300%);
+            position: absolute;
+            horizontal-align: center;
+            vertical-align: center;
+            color: #000000;
+            background-color: #eeeeee;
+            padding: 30px;
+        }
+
+        #link {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%);
+            size: 500px;
+            background-color: #ffffff;
+            font-size: 40px;
+        }
+
+        #mahler_score {
+            horizontal-align: center;
+            z-index: 2;
+        }
+    </style>
+
+    <body>
+        <a href=mainpage.html id='link'> Click to enter The Symphony Game!!
+        </a>
+        <div class="container">
+            <img src="https://www.clevelandorchestra.com/globalassets/1415/about/fromthearchives/15-02-10/archives-mahler-score.jpg" id='mahler_score'>
+            <p class="overlay-text">Here are the rules: You will hear 1 second of a symphony by a composer of your choice (so far Mahler). Then you will have to guess the symphony and the movement! If you need more time, you can click a button, and then you will hear more of the excerpt. Have fun!!
+            </p>
+        </div>
+    </body>
+
+</html>
