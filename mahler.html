@@ -1,0 +1,119 @@
+<html lang="en">
+
+    <head>
+        <title>Mahler</title>
+        <script src="mahlerjava.js"></script>
+    </head>
+    <style>
+        body {
+            background-color: #f0aa40;
+            line-height: 1.5;
+            margin: 0;
+            text-align: center;
+        }
+
+        #twoseconds,
+        #fourseconds,
+        #tenseconds,
+        #twentyseconds,
+        .answerButton
+        {
+            display: none;
+        }
+        .symphonyFeedback, .movementFeedback{
+            font-style: italic;
+        }
+
+
+    </style>
+
+    <body>
+        <section id="onesecond">
+            <h1> Extreme Level: 1 Second!</h1>
+            <button class="audioBtn" data-duration="1">Play Audio</button>
+            <h3>Symphony Number?</h3>
+            <input type="number" min="1" max="10" class="symphonyInput">
+            <p class="symphonyFeedback"></p>
+            <h3>Movement Number?</h3>
+            <input type="number" min="1" max="6" class="movementInput">
+            <p class="movementFeedback"></p>
+            <button class="submitBtn">Submit</button>
+            <button class="hintBtn" data-target="twoseconds">More Time</button>
+            <button class="showAnswerButton" style="display: none;">Show Complete Answer</button>
+            <p class="answerBtn" id='answer'></p>
+        </section>
+
+        <section id="twoseconds">
+            <hr>
+            <h1> Hard Level: 2 Seconds!</h1>
+            <button class="audioBtn" data-duration="2">Play Audio</button>
+            <h3>Symphony Number?</h3>
+            <input type="number" min="1" max="10" class="symphonyInput">
+            <p class="symphonyFeedback"></p>
+            <h3>Movement Number?</h3>
+            <input type="number" min="1" max="6" class="movementInput">
+            <p class="movementFeedback"></p>
+            <button class="submitBtn">Submit</button>
+            <button class="hintBtn" data-target="fourseconds">More Time</button>
+            <button class="showAnswerButton" style="display: none;">Show Complete Answer</button>
+            <p class="answerBtn" id='answer'></p>
+        </section>
+
+        <section id="fourseconds">
+            <hr>
+            <h1> Less-Hard Level: 4 Seconds!</h1>
+            <button class="audioBtn" data-duration="4">Play Audio</button>
+            <h3>Symphony Number?</h3>
+            <input type="number" min="1" max="10" class="symphonyInput">
+            <p class="symphonyFeedback"></p>
+            <h3>Movement Number?</h3>
+            <input type="number" min="1" max="6" class="movementInput">
+            <p class="movementFeedback"></p>
+            <button class="submitBtn">Submit</button>
+            <button class="hintBtn" data-target="tenseconds">More Time</button>
+            <button class="showAnswerButton" style="display: none;">Show Complete Answer</button>
+            <p class="answerBtn" id='answer'></p>
+        </section>
+
+        <section id="tenseconds">
+            <hr>
+            <h1> Medium Level: 10 Seconds!</h1>
+            <button class="audioBtn" data-duration="10">Play Audio</button>
+            <h3>Symphony Number?</h3>
+            <input type="number" min="1" max="10" class="symphonyInput">
+            <p class="symphonyFeedback"></p>
+            <h3>Movement Number?</h3>
+            <input type="number" min="1" max="6" class="movementInput">
+            <p class="movementFeedback"></p>
+            <button class="submitBtn">Submit</button>
+            <button class="hintBtn" data-target="twentyseconds">More Time</button>
+            <button class="showAnswerButton" style="display: none;">Show Complete Answer</button>
+            <p class="answerBtn" id='answer'></p>
+        </section>
+
+        <section id="twentyseconds">
+            <hr>
+            <h1> Easy Level: 20 Seconds!</h1>
+            <button class="audioBtn" data-duration="20">Play Audio</button>
+            <h3>Symphony Number?</h3>
+            <input type="number" min="1" max="10" class="symphonyInput">
+            <p class="symphonyFeedback"></p>
+            <h3>Movement Number?</h3>
+            <input type="number" min="1" max="6" class="movementInput">
+            <p class="movementFeedback"></p>
+            <button class="submitBtn">Submit</button>
+            <button class="giveUp">Give Up</button>
+            <p class="answerBtn" id='answer'></p>
+        </section>
+
+        <hr>
+        <button class="audioBtn" id="listen30" data-duration="30" style="display: none;">Hear Thirty Seconds!</button>
+        <p></p>
+        <button class="audioBtn" id="listenAll" data-duration="3422" style="display: none;">Hear Until the End of the Movement!</button>
+        <p></p>
+        <a href="mahler.html">Try Again!</a>
+        <p></p>
+        <a href="index.html">Go Back to Welcome Page!</a>
+    </body>
+
+</html>

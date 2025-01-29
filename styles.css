@@ -1,0 +1,65 @@
+body {
+    background-color: #77AEE0;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+.button1 {
+    background-color: #128000;
+    color: white;
+}
+
+.button2 {
+    background-color: #7700E6;
+    color: white;
+}
+
+.button3 {
+    background-color: #CB38E6;
+    color: white;
+}
+
+#Composer {
+    height: 30px;
+    width: 230px;
+    border-style: solid;
+    border-color: #000000;
+    text-align: center;
+}
+
+.row {
+    white-space: nowrap;
+}
+
+.button1,
+.button2,
+.button3 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+}
+
+h1 {
+    font-family: 'Zapfino';
+    font-size: 30px;
+    horizontal-align: center;
+    padding-top: 40px;
+}
+
+#sibelius {
+    height: 800px;
+    z-index: 1;
+    transform: translate(0%);
+    horizontal-align: center;
+
+}
+
+#mahler {
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -27.9%);
+    horizontal-align: center;
+}
