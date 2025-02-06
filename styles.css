@@ -56,15 +56,13 @@ h1 {
     align-items: center; 
 }
 
-.image-container img {
+#sibelius {
+    z-index: 2;    
     position: absolute; 
     height: 800px; 
-    width: auto; 
-}
-
-#sibelius {
-    z-index: 2; 
 
 #mahler {
     z-index: 1; 
+    width: auto; 
+    height: 800px; 
 }
