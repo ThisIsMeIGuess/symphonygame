@@ -60,7 +60,10 @@ h1 {
     z-index: 2;    
     position: absolute; 
     height: 800px; 
+}
 
 #mahler {
     z-index: 1; 
+    height: 800px; 
+    width: auto; 
 }
