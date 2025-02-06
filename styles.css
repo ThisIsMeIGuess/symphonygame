@@ -50,15 +50,16 @@ h1 {
 #sibelius {
     height: 800px;
     z-index: 1;
-    transform: translate(0%);
-    horizontal-align: center;
-    vertical-align: text-top;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 #mahler {
     height: 800px;
-    position: absolute;
-    transform: translate(0%);
-    horizontal-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
