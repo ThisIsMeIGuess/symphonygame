@@ -52,6 +52,7 @@ h1 {
     z-index: 1;
     transform: translate(0%);
     horizontal-align: center;
+    vertical-align: text-top;
 
 }
 
@@ -60,6 +61,6 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
     horizontal-align: center;
+    vertical-align: text-top;
 }
