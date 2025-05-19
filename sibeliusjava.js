@@ -5,28 +5,28 @@ let correctMovement;
 
 // Array of audio files (one per movement)
 const filePaths = [
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747622986/Sibelius__Symphony_No._1_in_E_minor_Op._39__1._Andante_ma_non_troppo_-_Allegro_energico_nvehga.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747623149/Sibelius__Symphony_No._1_in_E_minor_Op._39__2._Andante_ma_non_troppo_lento_z0bath.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624409/Sibelius__Symphony_No._1_in_E_minor_Op._39__3._Scherzo_Allegro_tfhw1l.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624587/Sibelius__Symphony_No._1_in_E_minor_Op._39__4._Finale_Quasi_una_fantasia_yl5pg3.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624966/Symphony_No._2_in_D_Major_Op._43__I._Allegretto_Poco_allegro_Tranquillo_ma_poco_a_poco..._eoz6dj.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625055/Symphony_No._2_in_D_Major_Op._43__II._Tempo_andante_ma_rubato_Andante_sostenuto_2024..._gpp0g4.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625094/Symphony_No._2_in_D_Major_Op._43__III._Vivacissimo_Lento_e_suave_Largamente_2024..._vvwgk4.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625119/Symphony_No._2_in_D_Major_Op._43__IV._Finale__Allegro_moderato_2024_Remastered_Amsterdam_1964_owmggp.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625467/Sibelius__Symphony_No._3_in_C_Op._52__1._Allegro_moderato_wdcyw3.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625471/Sibelius__Symphony_No._3_in_C_Op._52__2._Andantino_con_moto_quasi_allegretto_kuk8nc.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625516/Sibelius__Symphony_No._3_in_C_Op._52__3._Moderato_-_Allegro_ma_non_tanto_vtdtkr.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626049/Symphony_No._4_in_A_Minor_Op._63__I._Tempo_molto_moderato_quasi_adagio_rrlxs6.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626057/Symphony_No._4_in_A_Minor_Op._63__II._Allegro_molto_vivace_dha8p4.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626068/Symphony_No._4_in_A_Minor_Op._63__III._Il_tempo_largo_evmwah.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626078/Symphony_No._4_in_A_Minor_Op._63__IV._Allegro_ztejz7.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626935/Symphony_No._5_in_E-Flat_Major_Op._82__I._Tempo_molto_moderato_-_Allegro_moderato_vdkc2c.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626939/Symphony_No._5_in_E-Flat_Major_Op._82__II._Andante_mosso_quasi_allegretto_b4w7um.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627232/Symphony_No._5_in_E-Flat_Major_Op._82__III._Allegro_molto_-_Largamente_assai_pzl9io.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627099/Sibelius__Symphony_No._6_in_D_Minor_Op._104__I._Allegro_molto_moderato_icpgbr.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627103/Sibelius__Symphony_No._6_in_D_Minor_Op._104__II._Allegretto_moderato_jmo0nj.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627106/Sibelius__Symphony_No._6_in_D_Minor_Op._104__III._Poco_vivace_a8dvbe.mp3"
-"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627110/Sibelius__Symphony_No._6_in_D_Minor_Op._104__IV._Allegro_molto_vrngt2.mp3"
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747622986/Sibelius__Symphony_No._1_in_E_minor_Op._39__1._Andante_ma_non_troppo_-_Allegro_energico_nvehga.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747623149/Sibelius__Symphony_No._1_in_E_minor_Op._39__2._Andante_ma_non_troppo_lento_z0bath.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624409/Sibelius__Symphony_No._1_in_E_minor_Op._39__3._Scherzo_Allegro_tfhw1l.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624587/Sibelius__Symphony_No._1_in_E_minor_Op._39__4._Finale_Quasi_una_fantasia_yl5pg3.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747624966/Symphony_No._2_in_D_Major_Op._43__I._Allegretto_Poco_allegro_Tranquillo_ma_poco_a_poco..._eoz6dj.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625055/Symphony_No._2_in_D_Major_Op._43__II._Tempo_andante_ma_rubato_Andante_sostenuto_2024..._gpp0g4.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625094/Symphony_No._2_in_D_Major_Op._43__III._Vivacissimo_Lento_e_suave_Largamente_2024..._vvwgk4.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625119/Symphony_No._2_in_D_Major_Op._43__IV._Finale__Allegro_moderato_2024_Remastered_Amsterdam_1964_owmggp.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625467/Sibelius__Symphony_No._3_in_C_Op._52__1._Allegro_moderato_wdcyw3.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625471/Sibelius__Symphony_No._3_in_C_Op._52__2._Andantino_con_moto_quasi_allegretto_kuk8nc.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747625516/Sibelius__Symphony_No._3_in_C_Op._52__3._Moderato_-_Allegro_ma_non_tanto_vtdtkr.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626049/Symphony_No._4_in_A_Minor_Op._63__I._Tempo_molto_moderato_quasi_adagio_rrlxs6.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626057/Symphony_No._4_in_A_Minor_Op._63__II._Allegro_molto_vivace_dha8p4.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626068/Symphony_No._4_in_A_Minor_Op._63__III._Il_tempo_largo_evmwah.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626078/Symphony_No._4_in_A_Minor_Op._63__IV._Allegro_ztejz7.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626935/Symphony_No._5_in_E-Flat_Major_Op._82__I._Tempo_molto_moderato_-_Allegro_moderato_vdkc2c.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747626939/Symphony_No._5_in_E-Flat_Major_Op._82__II._Andante_mosso_quasi_allegretto_b4w7um.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627232/Symphony_No._5_in_E-Flat_Major_Op._82__III._Allegro_molto_-_Largamente_assai_pzl9io.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627099/Sibelius__Symphony_No._6_in_D_Minor_Op._104__I._Allegro_molto_moderato_icpgbr.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627103/Sibelius__Symphony_No._6_in_D_Minor_Op._104__II._Allegretto_moderato_jmo0nj.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627106/Sibelius__Symphony_No._6_in_D_Minor_Op._104__III._Poco_vivace_a8dvbe.mp3",
+"https://res.cloudinary.com/dm8attfdo/video/upload/v1747627110/Sibelius__Symphony_No._6_in_D_Minor_Op._104__IV._Allegro_molto_vrngt2.mp3",
 "https://res.cloudinary.com/dm8attfdo/video/upload/v1747627303/Symphony_No._7_in_C_Major_Op._105_cak4sr.mp3"
 ];
 
